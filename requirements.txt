@@ -3,4 +3,4 @@ pandas>=1.5.0
 gtts
 requests
 beautifulsoup4
-duckduckgo-search 
+ollama 
