@@ -1,3 +1,6 @@
+# WollofChat
+Wolof educational question-answering app that can answer basic math, science, and history questions in Wollof
+
 # Wolof Educational Question-Answering App
 
 This app helps Wolof-speaking students get answers to math, science, and history questions in Wolof, using state-of-the-art translation and question-answering models.
@@ -59,4 +62,4 @@ For more comprehensive answers using Mistral 7B:
 - **Model download issues:** Check internet connection and try again
 
 ## Deployment
-Ready for deployment on Streamlit Cloud, Heroku, or any Python hosting platform. All dependencies are pinned for compatibility. 
+Ready for deployment on Streamlit Cloud, Heroku, or any Python hosting platform. All dependencies are pinned for compatibility.
