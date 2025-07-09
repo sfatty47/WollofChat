@@ -10,8 +10,8 @@ This app helps Wolof-speaking students get answers to math, science, and history
 - **Voice input and output** - speak your questions and listen to answers
 - Uses facebook/nllb-200-distilled-600M for translation (Wolof ↔ English)
 - Uses deepset/roberta-base-squad2 for English question answering
-- Optional: Local Mistral 7B LLM for more comprehensive answers
-- Static context for math, science, history, geography, technology, and literature
+- **No local LLM downloads required** - works with pre-trained models only
+- Enhanced static context for math, science, history, geography, technology, and literature
 - Language switch (Wolof/English UI)
 - Feedback system for users
 
@@ -28,7 +28,7 @@ This app helps Wolof-speaking students get answers to math, science, and history
      - **Windows:** Usually works out of the box
 4. **Run the app:**
    ```bash
-   streamlit run wolof_edu_qa_app.py
+   streamlit run streamlit_app.py
    ```
 
 ## Requirements
@@ -43,11 +43,20 @@ This app helps Wolof-speaking students get answers to math, science, and history
 - Supports both Wolof and English speech recognition
 - Uses Google's text-to-speech for natural Wolof pronunciation
 
-## Optional LLM Setup
-For more comprehensive answers using Mistral 7B:
-1. Download a Mistral GGUF model from [TheBloke on HuggingFace](https://huggingface.co/TheBloke/Mistral-7B-Instruct-v0.2-GGUF)
-2. Place the `.gguf` file in your project directory
-3. The app will automatically use it for better answers
+## How It Works
+1. **Translation:** Your Wolof question is translated to English using NLLB
+2. **Question Answering:** The English question is answered using a pre-trained QA model with rich static context
+3. **Back Translation:** The English answer is translated back to Wolof
+4. **Voice Output:** Optional text-to-speech converts the Wolof answer to audio
+
+## Enhanced Knowledge Base
+The app includes comprehensive static context for:
+- **Mathematics:** Basic operations, algebra, geometry, calculus, statistics
+- **Science:** Physics, chemistry, biology, earth science, human body
+- **History:** Ancient civilizations, world events, important figures
+- **Geography:** Continents, countries, landmarks, natural features
+- **Technology:** Computers, internet, AI, mobile devices, energy
+- **Literature:** Poetry, prose, drama, genres, famous authors
 
 ## Usage
 1. Select your preferred language (Wolof/English) for the UI
@@ -62,4 +71,4 @@ For more comprehensive answers using Mistral 7B:
 - **Model download issues:** Check internet connection and try again
 
 ## Deployment
-Ready for deployment on Streamlit Cloud, Heroku, or any Python hosting platform. All dependencies are pinned for compatibility.
+Ready for deployment on Streamlit Cloud, Heroku, or any Python hosting platform. All dependencies are pinned for compatibility. No large model downloads required!
