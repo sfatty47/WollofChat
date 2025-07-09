@@ -1,0 +1,10 @@
+streamlit
+transformers>=4.40.0
+sentencepiece
+torch>=2.6; platform_system!="Darwin" or python_version<'3.12'
+pandas
+llama-cpp-python
+speechrecognition
+pyaudio
+gtts
+playsound 
