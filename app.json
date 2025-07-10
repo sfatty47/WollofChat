@@ -1,0 +1,52 @@
+{
+  "name": "WolofChat",
+  "description": "Wolof Educational Q&A App with AI-powered responses",
+  "repository": "https://github.com/yourusername/wolofchat",
+  "keywords": ["wolof", "education", "ai", "chatbot", "africa"],
+  "env": {
+    "OPENAI_API_KEY": {
+      "description": "OpenAI API Key for GPT responses",
+      "required": false
+    },
+    "OLLAMA_URL": {
+      "description": "Ollama server URL (for local deployment)",
+      "value": "http://localhost:11434",
+      "required": false
+    },
+    "HUGGINGFACE_TOKEN": {
+      "description": "Hugging Face API token",
+      "required": false
+    },
+    "SPEECH_RECOGNITION_ENABLED": {
+      "description": "Enable speech recognition",
+      "value": "true",
+      "required": false
+    },
+    "TTS_ENABLED": {
+      "description": "Enable text-to-speech",
+      "value": "true",
+      "required": false
+    },
+    "WEB_SEARCH_ENABLED": {
+      "description": "Enable web search",
+      "value": "true",
+      "required": false
+    },
+    "DEBUG_MODE": {
+      "description": "Enable debug mode",
+      "value": "false",
+      "required": false
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ],
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "basic"
+    }
+  }
+} 

@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  wolofchat:
+    build: .
+    ports:
+      - "8501:8501"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - OLLAMA_URL=http://ollama:11434
+      - HUGGINGFACE_TOKEN=${HUGGINGFACE_TOKEN}
+      - SPEECH_RECOGNITION_ENABLED=true
+      - TTS_ENABLED=true
+      - WEB_SEARCH_ENABLED=true
+      - DEBUG_MODE=false
+    volumes:
+      - .:/app
+    depends_on:
+      - ollama
+    networks:
+      - wolofchat-network
+
+  ollama:
+    image: ollama/ollama:latest
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    networks:
+      - wolofchat-network
+
+volumes:
+  ollama_data:
+
+networks:
+  wolofchat-network:
+    driver: bridge 

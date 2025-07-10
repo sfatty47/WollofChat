@@ -1,8 +1,30 @@
+# Core dependencies
 streamlit==1.32.0
+flask==3.0.0
+fastapi==0.104.1
+uvicorn==0.24.0
+
+# LLM services
+openai==1.12.0
 ollama==0.5.1
+
+# Speech and audio
+SpeechRecognition==3.10.0
+pyaudio==0.2.11
 gtts==2.5.4
+
+# Web and data processing
 requests==2.31.0
 beautifulsoup4==4.12.2
 wikipedia==1.4.0
 pandas==2.0.3
-numpy==1.24.3 
+numpy==1.24.3
+
+# Optional: For Whisper (when PyTorch supports Python 3.13)
+# openai-whisper
+# torch
+
+# Development and testing
+pytest==7.4.3
+black==23.11.0
+flake8==6.1.0 
